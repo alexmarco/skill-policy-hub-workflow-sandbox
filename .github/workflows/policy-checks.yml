@@ -1,0 +1,39 @@
+name: Policy Checks
+
+on:
+  pull_request:
+    branches:
+      - develop
+      - main
+
+env:
+  ALLOW_HOTFIX_TO_MAIN: "true"
+  ALLOW_RELEASE_TO_MAIN: "true"
+  BRANCH_NAME_REGEX: '^(feature|bugfix|chore|docs|refactor|test|build|ops|release|hotfix)/[a-z0-9._-]+$'
+  MAIN_SOURCE_POLICY_MESSAGE: 'Changes into main must come from develop, release/*, or hotfix/* according to the selected policy'
+
+jobs:
+  policy:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+
+      - name: Validate branch policy
+        env:
+          CI_BASE_BRANCH: ${{ github.base_ref }}
+          CI_HEAD_BRANCH: ${{ github.head_ref }}
+        run: bash scripts/ci/policy-checks.sh
+
+      - name: Validate Conventional Commits
+        env:
+          CI_BASE_BRANCH: ${{ github.base_ref }}
+        run: bash scripts/ci/validate-conventional-commits.sh
+
+      - name: Run quality gates
+        run: bash scripts/ci/run-quality-gates.sh

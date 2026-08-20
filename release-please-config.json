@@ -1,0 +1,10 @@
+{
+  "release-type": "simple",
+  "packages": {
+    ".": {
+      "release-type": "simple",
+      "version-file": "VERSION",
+      "changelog-path": "CHANGELOG.md"
+    }
+  }
+}
