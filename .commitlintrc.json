@@ -1,0 +1,10 @@
+{
+  "helpUrl": "https://www.conventionalcommits.org/en/v1.0.0/",
+  "rules": {
+    "type-case": [2, "always", "lower-case"],
+    "type-empty": [2, "never"],
+    "type-enum": [2, "always", ["feat", "fix", "refactor", "perf", "style", "test", "build", "ops", "docs", "chore", "revert"]],
+    "subject-empty": [2, "never"],
+    "subject-full-stop": [2, "never", "."]
+  }
+}
