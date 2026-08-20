@@ -1,0 +1,14 @@
+README.md
+  h_aa720401f7d324 2-6
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.6.22",
+  "base_commit_sha": "e29a475eacd2cd986046bf8d58b3a1ecd36ddb8d",
+  "prompts": {},
+  "humans": {
+    "h_aa720401f7d324": {
+      "author": "Alex <4004996+alexmarco@users.noreply.github.com>"
+    }
+  }
+}
