@@ -1,0 +1,23 @@
+scripts/ci/policy-checks.sh
+  s_0921d72a7cdd5a::t_0b13543f6dc387 1-48
+scripts/ci/run-quality-gates.sh
+  s_0921d72a7cdd5a::t_e6a3cd2128cfaa 1-45
+scripts/ci/validate-conventional-commits.sh
+  s_0921d72a7cdd5a::t_cf39fe2b7d80e0 1-43
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.6.22",
+  "base_commit_sha": "5bbac5b6f7ea129f90859cb124ce5dc8e33422f8",
+  "prompts": {},
+  "sessions": {
+    "s_0921d72a7cdd5a": {
+      "agent_id": {
+        "tool": "opencode",
+        "id": "ses_fe20384b6ffeZC6ZT8WXrxiONb",
+        "model": "gpt-5.4-fast"
+      },
+      "human_author": "Alex <4004996+alexmarco@users.noreply.github.com>"
+    }
+  }
+}
